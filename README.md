@@ -1,0 +1,2 @@
+# funny
+Collection funny thing
