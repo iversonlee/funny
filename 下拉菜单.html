@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!--<link rel="stylesheet" href="bootstrap.css">-->
+  <!--<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="reset.css">
+  <style type="text/css">
+
+    .arrow{
+      width:20px;
+      height:100%;
+      margin:0 auto;
+      transform:rotate(90deg);
+      font-size:100px;
+      font: bold 12px sans-serif;
+    }
+    .glyphicon-chevron-down{
+      font-size:16px;
+    }
+    span,i,em{
+      display: inline-block;
+    }
+    .dropdown-container,.dropdown-menu{
+      width:100px;
+      background-color: #bfa;
+      border:1px solid #f0f0f0;
+    }
+
+    .dropdown-menu{
+      display: block;
+    }
+    .button-text{
+      width:70%;
+      text-align: center;
+    }
+    .button-icon{
+      width:30%;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+    .dropdown-menu-hide{
+      display: none;
+    }
+    a{
+      color: #000;
+    }
+
+  </style>
+</head>
+<body>
+<!-- >  只能在行内块，和块元素中可以旋转-->
+<div class="dropdown-container">
+  <span class="button-text">下拉菜单</span><span class="button-icon" id="data-toggle"><span ><i class="arrow" > ></i></span></span>
+</div>
+<div class="dropdown-menu " id="dropdown-menu">
+  <ul >
+    <li class="dropdown-list"><a href="">Action</a></li>
+    <li class="dropdown-list"><a href="">Action</a></li>
+    <li class="dropdown-list"><a href="">Action</a></li>
+  </ul>
+</div>
+
+<span class="glyphicon glyphicon-chevron-down"></span>
+
+
+  <!-- Split button -->
+<!--  <div class="btn-group">
+    <button type="button" class="btn btn-danger">Action</button>
+    <button type="button" class="btn dropdown-toggle btn-danger" data-toggle="dropdown">
+      &lt;!&ndash;<span class="caret"></span>&ndash;&gt;
+      <span class="arrow"> ></span>
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="#">Action</a></li>
+      <li><a href="#">Another action</a></li>
+      <li><a href="#">Something else here</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Separated link</a></li>
+    </ul>
+  </div>-->
+
+
+  <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    $('#data-toggle').click(function () {
+      $('#dropdown-menu').toggleClass('dropdown-menu-hide')
+    })
+  })
+
+</script>
+
+</body>
+</html>
